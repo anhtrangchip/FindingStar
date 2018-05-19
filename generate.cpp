@@ -22,8 +22,12 @@ int *generateTable(int n, int bomb, int *locatBombX, int *locatBombY)
     for (int i=0; i<bomb; i++) {
         int random_x = rand() % (n-1) + 0;
         int random_y = rand() % (n-1) + 0;
-        a[random_x*n + random_y] = 1;
-        *(locatBombX + i) = random_x; *(locatBombY + i) = random_y;
+        if (a[random_x*n + random_y] == 1) {
+            i --;
+        } else {
+            a[random_x*n + random_y] = 1;
+            *(locatBombX + i) = random_x; *(locatBombY + i) = random_y;
+        }
     }
     return a;
 }

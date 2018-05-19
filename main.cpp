@@ -322,7 +322,7 @@ int main( int argc, char* args[] )
 
                 switchBomb(table, n, bombLocatX, bombLocatY, numberOfBomb,
                     gRenderer, gTextureBox, gTextureGalaxy, timewait);
-                timewait -= 3;
+                timewait -= 4;
 
 
                 for (int i=0; i<numberOfBomb; i++) {
@@ -358,7 +358,7 @@ int main( int argc, char* args[] )
                                      printf("Correct\n");
                                      printf("result %i\n time %i\n", result, timewait);
 
-                                     if (timewait < 25 && result == 2) {
+                                     if (timewait < 20 && result == 2) {
                                         showResult(gRenderer, gTextureBox, gTextureGalaxy, gTextureMar, gTextureLevelup, table, n, bombLocatX, bombLocatY, numberOfBomb, result, tmp, timewait);
                                         Mix_HaltChannel(-1);
                                         Mix_PlayChannel( -1, gWinner,  0);

@@ -191,7 +191,7 @@ void showResult(SDL_Renderer* gRenderer, SDL_Texture* gTextureBox, SDL_Texture* 
         SDL_Delay(500);
     } else if (result == 2) {
         showBombTable(gRenderer, gTextureBox, gTextureGalaxy, gTextureMar, arr, n, locatBombX, locatBombY, bomb);
-        if (timewait >= 25) {
+        if (timewait >= 20) {
             for (int i=0; i<10; i++) {
                 SDL_Rect viewport;
                 viewport.x = (SCREEN_WIDTH - levelupw/(10 - i)) / 2;
